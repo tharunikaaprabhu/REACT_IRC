@@ -7,6 +7,7 @@
   display: flex;
   text-align: center;
   align-items: center;
+  margin-left: 100px;
   height: 90vh;
   width: 50vw;
 }
@@ -93,13 +94,13 @@ input {
   background-color: #eeeeee;
 }
 .form-login input[type="submit"] {
-  background-color: #3e2723;;
+  background-color: #0c0c0c;;
   color: #eee;
   font-weight: bold;
   text-transform: uppercase;
 }
 .form-login input[type="submit"]:focus, .form-login input[type="submit"]:hover {
-  background-color: rgb(132, 26, 26);
+  background-color: rgb(65, 63, 63);
 }
 .form-field {
   display: -webkit-box;
@@ -127,7 +128,7 @@ input {
 
 a{
   text-decoration: none;
-  color: rgb(187, 19, 19);
+  color: rgb(19, 18, 18);
 
 }
 

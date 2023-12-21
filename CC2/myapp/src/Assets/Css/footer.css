@@ -23,4 +23,24 @@
     font-weight: bold;
     text-shadow: 0 0 10px #ffd700;
   }
-  
+  /* footer.css */
+/* Your existing styles */
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  font-size: 24px;
+  color: #333; /* Change color as needed */
+  text-decoration: none;
+}
+
+/* Hover effect */
+.social-icons a:hover {
+  color: #007bff; /* Change color on hover */
+}

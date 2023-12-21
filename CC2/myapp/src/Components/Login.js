@@ -40,13 +40,13 @@ const Login = () => {
 
           <div className="links">
             <p>
-              Don't have an account? <Link to="/Sign_up">Sign_Up</Link>
+              Create new account? <Link to="/Sign_up">REGISTER</Link>
             </p>
           </div>
         </div>
       </div>
     </>
   );
-};
+}
 
 export default Login;

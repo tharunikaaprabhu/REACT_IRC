@@ -1,51 +1,63 @@
+// RegistrationForm.js
+import React, { useState } from 'react';
 import '../Assets/Css/signup.css';
-
 const Sign_up = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    password: '',
+    confirmPassword: '',
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // You can handle form submission here (e.g., send data to backend)
+    console.log(formData);
+  };
+
   return (
-    <div id="app">
-      <div className="form-wrapper">
-        <section className="container">
-          <form action="#" className="form">
-            <label><center><h2>Registration Form</h2></center></label>
-            <div className="input-box">
-              <label>Full Name</label>
-              <input type="text" placeholder="Enter full name" required />
-            </div>
-            <div className="input-box">
-              <label>Email Address</label>
-              <input type="text" placeholder="Enter email address" required />
-            </div>
-            <div className="column">
-              <div className="input-box">
-                <label>Phone Number</label>
-                <input type="number" placeholder="Enter phone number" required />
-              </div>
-              <div className="input-box">
-                <label>Birth Date</label>
-                <input type="date" placeholder="Enter birth date" required />
-              </div>
-            </div>
-            <div className="gender-box">
-              <h3>Gender</h3>
-              <div className="gender-option">
-                <div className="gender">
-                  <input type="radio" id="check-male" name="gender" checked />
-                  <label htmlFor="check-male">male</label>
-                </div>
-                <div className="gender">
-                  <input type="radio" id="check-female" name="gender" />
-                  <label htmlFor="check-female">Female</label>
-                </div>
-                <div className="gender">
-                  <input type="radio" id="check-other" name="gender" />
-                  <label htmlFor="check-other">prefer not to say</label>
-                </div>
-              </div>
-              <button>Submit</button>
-            </div>
-          </form>
-        </section>
-      </div>
+    <div className="registration-form">
+      <h2>Register</h2>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="Name"
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
+          required
+        />
+        <input
+          type="email"
+          placeholder="Email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          required
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          name="password"
+          value={formData.password}
+          onChange={handleChange}
+          required
+        />
+        <input
+          type="password"
+          placeholder="Confirm Password"
+          name="confirmPassword"
+          value={formData.confirmPassword}
+          onChange={handleChange}
+          required
+        />
+        <button type="submit">Register</button>
+      </form>
     </div>
   );
 };
